@@ -9,26 +9,26 @@ class Mp3Converter < Formula
   
     depends_on "python@3.10"
     depends_on "ffmpeg"
-  
+
     resource "pydub" do
-      url "https://files.pythonhosted.org/packages/7c/5d/56762bd8a2c1b9942cf2c8e5313bc43b19d446a0d47d2b7a52c351cbfa02/pydub-0.25.1.tar.gz"
-      sha256 "980a33ce9949cab2a569606b65674d748ecbca4c8475af65170d4bf7284b8f4d"
+      url "https://files.pythonhosted.org/packages/fe/9a/e6bca0eed82db26562c73b5076539a4a08d3cffd19c3cc5913a3e61145fd/pydub-0.25.1.tar.gz"
+      sha256 "980a33ce9949cab2a569606b65674d748ecbca4f0796887fd6f46173a7b0d30f"
     end
-  
+
     resource "mutagen" do
-      url "https://files.pythonhosted.org/packages/f3/d9/2232a4cb9a98e2d2501f7e58d193bc49c956ef23756d7423ba1bd87e386d/mutagen-1.45.1.tar.gz"
-      sha256 "6397602efb3c2d7baebd2166ed85731ae1c1d475abca22090b7141ff5034b3e1"
+      url "https://files.pythonhosted.org/packages/b1/54/d1760a363d0fe345528e37782f6c18123b0e99e8ea755022fd51f1ecd0f9/mutagen-1.46.0.tar.gz"
+      sha256 "6e5f8ba84836b99fe60be5fb27f84be4ad919bbb6b49caa6ae81e70584b55e58"
     end
-  
+
     resource "colorama" do
-      url "https://files.pythonhosted.org/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz"
-      sha256 "5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"
+      url "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz"
+      sha256 "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"
     end
-  
+
     def install
       virtualenv_install_with_resources
     end
-  
+
     test do
       system bin/"mp3_converter", "--help"
     end
